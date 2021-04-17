@@ -1,7 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
-import { By } from '@angular/platform-browser';
-
 import { ɵivyEnabled as ivyEnabled } from '@angular/core';
 
 import { AppComponent } from './app.component';
@@ -34,13 +32,15 @@ describe('AppComponent', () => {
   });
 
   // source: https://github.com/nrwl/nx/issues/2752
+  // Uncomment line in jest.config.js to enable ivy on tests for jest
   it('should have ivy enabled', () => {
+    // Checks to see if ivy is enabled for this component (which would mean it's enabled for this test)
     expect(ivyEnabled).toBe(true);
   });
 
   describe('how the dyamic component works', () => {
     it('should call loadComponent() on ngOnInit', () => {
-      const spy = spyOn(app, 'loadComponent');
+      const spy = jest.spyOn(app, 'loadComponent');
 
       app.ngOnInit();
 
@@ -51,7 +51,8 @@ describe('AppComponent', () => {
       app.loadComponent();
       fixture.detectChanges();
 
-      const body = document.body;//fixture.debugElement.query(By.css('body'));
+      const body = document.body;
+
       expect(body.style.background).toBe('cadetblue');
     });
   });
