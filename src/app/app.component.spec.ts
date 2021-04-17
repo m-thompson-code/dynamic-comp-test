@@ -32,7 +32,7 @@ describe('AppComponent', () => {
 
   describe('how the dyamic component works', () => {
     it('should call loadComponent() on ngOnInit', () => {
-      const spy = spyOn(app, 'loadComponent');
+      const spy = jest.spyOn(app, 'loadComponent');
 
       app.ngOnInit();
 
