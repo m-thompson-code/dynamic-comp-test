@@ -6,7 +6,7 @@ const { compilerOptions } = require('./tsconfig');
 // //To use the util script, you can just define it in your root jest.config.js
 
 // Include this line to enable ivy on tests for jest
-require('jest-preset-angular/ngcc-jest-processor');
+// require('jest-preset-angular/ngcc-jest-processor');
 
 module.exports = {
   preset: 'jest-preset-angular',
