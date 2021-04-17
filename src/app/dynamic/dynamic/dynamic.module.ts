@@ -12,9 +12,9 @@ import { DynamicComponent } from './dynamic.component';
   exports: [
     DynamicComponent
   ],
-  // entryComponents shouldn't have to be a thing with Ivy enabled
-  entryComponents: [
-    DynamicComponent
-  ]
+  // // entryComponents shouldn't have to be a thing with Ivy enabled
+  // entryComponents: [
+  //   DynamicComponent
+  // ]
 })
 export class DynamicModule { }
