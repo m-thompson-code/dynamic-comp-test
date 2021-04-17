@@ -5,7 +5,8 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "test": "npx jest",
+    "reinstall": "rm -rf node_modules && npm install",
+    "test": "npx jest --clearCache && npx jest",
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
