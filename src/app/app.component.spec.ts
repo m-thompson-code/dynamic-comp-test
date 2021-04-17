@@ -1,6 +1,9 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { By } from '@angular/platform-browser';
+
+import { ɵivyEnabled as ivyEnabled } from '@angular/core';
+
 import { AppComponent } from './app.component';
 import { DynamicModule } from './dynamic/dynamic/dynamic.module';
 
@@ -28,6 +31,10 @@ describe('AppComponent', () => {
 
   it('should create the app', () => {
     expect(app).toBeTruthy();
+  });
+
+  it('should have ivy enabled', () => {
+    expect(ivyEnabled).toBe(true);
   });
 
   describe('how the dyamic component works', () => {
