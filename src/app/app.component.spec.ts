@@ -33,6 +33,7 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
+  // source: https://github.com/nrwl/nx/issues/2752
   it('should have ivy enabled', () => {
     expect(ivyEnabled).toBe(true);
   });
